@@ -1,0 +1,21 @@
+1.  Tambah theme option di admin config
+    /application/views/admin/dashboard/config.php line 75
+
+    contoh: buat theme "shine"
+
+2.  Buat folder template "shine" di:
+    /application/views/front
+
+    atau copy dari theme yg sudah ada, rename dengan "shine"
+
+3.  Slice html template sesuai dengan kebutuhan, contoh menjadi:
+    di folder : /application/views/front/shine/layout
+    - wrapper.php
+        - head.php
+        - header.php
+        - content.php
+        - footer.php
+    
+    Breakdown content (/application/views/front/shine/home/list.php) di slice di folder: /application/views/front/shine/home
+
+4. Copy semua file pendukung (js, css, images, font) ke folder /assets/front/shine

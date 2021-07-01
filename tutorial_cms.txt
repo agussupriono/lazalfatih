@@ -1,0 +1,8 @@
+Template front end      : /application/views/front
+Template admin          : /application/views/admin
+Setting Configurasi     : /application/config/config.php
+Setting Database        : /application/config/database.php
+Setting Admin Theme     : /application/views/admin/dashboard/config.php
+Loading Page Part       : /application/views/front/catchycarz/layout/wrapper.php
+CSS & JS                : /assets/front/catchycarz
+Content List            : /application/views/front/catchycarz/home/list.php
