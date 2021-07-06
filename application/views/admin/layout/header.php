@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo base_url('admin/dasbor') ?>">
+        <a class="navbar-brand" href="<?php echo base_url('admin/dasbor') ?>" style="font-size: 0.8vw;">
             <?php echo $site['nameweb'] ?>
         </a> 
     </div>

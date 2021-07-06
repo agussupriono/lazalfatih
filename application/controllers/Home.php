@@ -8,7 +8,7 @@ class Home extends CI_Controller {
     public function index() {
 
         $site = $this->mConfig->list_config();
-        $galleries = $this->mGalleries->listGalleriesPubHome();
+        $sliderhome = $this->mGalleries->listGalleriesPubHome();
 //        $blogs = $this->mBlogs->listBlogsPub();
         $products = $this->mProducts->listProductsPub();
         $clients = $this->mClients->listClients();
@@ -19,7 +19,7 @@ class Home extends CI_Controller {
 
         $data = array('title' => 'Home - ' . $site['nameweb'],
             'site' => $site,
-            'galleries' => $galleries,
+            'sliderhome' => $sliderhome,
 //            'blogs' => $blogs,
             'products' => $products,
             'clients' => $clients,

@@ -1,139 +1,119 @@
-<body class="host_version"> 
-    <!-- Modal -->
-    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header tit-up">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Customer Login</h4>
-                </div>
-                <div class="modal-body customer-box row">
-                    <div class="col-md-12">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
-                            <li><a href="#Registration" data-toggle="tab">Registration</a></li>
-                        </ul>
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="Login">
-                                <form role="form" class="form-horizontal">
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <input class="form-control" id="email1" placeholder="Name" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-10">
-                                            <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
-                                                Submit
-                                            </button>
-                                            <a class="for-pwd" href="javascript:;">Forgot your password?</a>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="tab-pane" id="Registration">
-                                <form role="form" class="form-horizontal">
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <input class="form-control" placeholder="Name" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <input class="form-control" id="email" placeholder="Email" type="email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <input class="form-control" id="mobile" placeholder="Mobile" type="email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <input class="form-control" id="password" placeholder="Password" type="password">
-                                        </div>
-                                    </div>
-                                    <div class="row">							
-                                        <div class="col-sm-10">
-                                            <button type="button" class="btn btn-light btn-radius btn-brd grd1">
-                                                Save &amp; Continue
-                                            </button>
-                                            <button type="button" class="btn btn-light btn-radius btn-brd grd1">
-                                                Cancel</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+<?php
+//set menu
+$menusX = array(
+    'menus' => array(),
+    'parent_menus' => array()
+);
+
+foreach ($menus as $menu1) {
+    $menusX['menus'][$menu1['menu_id']] = $menu1;
+    //creates entry into parent_menus array. parent_menus array contains a list of all menus with children
+    $menusX['parent_menus'][$menu1['parent_menu_id']][] = $menu1['menu_id'];
+}
+//echo json_encode($menusX);
+
+function buildMenu($parent, $menu, $i=1, $strDeep="") {
+    $html = "";
+    if (isset($menu['parent_menus'][$parent])) {
+        foreach ($menu['parent_menus'][$parent] as $menu_id) {
+            if (isset($menu['parent_menus'][$menu_id])) {
+                if(count($menu['parent_menus'][$menu_id])>0){
+                    $html .= '<li class="nav-item dropdown">';
+                    $html .= '<a class="nav-link" data-toggle="dropdown" href="'.$menu['menus'][$menu_id]['menu_url'].'">'.$menu['menus'][$menu_id]['menu_name'].' <i class="fa fa-angle-down"></i></a>';
+                } else {
+                    $html .= '<li class="nav-item">';
+                    $html .= '<a class="nav-link" href="'.$menu['menus'][$menu_id]['menu_url'].'">'.$menu['menus'][$menu_id]['menu_name'].'</a>';
+                }    
+            } else {
+                $html .= '<li class="nav-item">';
+                $html .= '<a class="nav-link" href="'.$menu['menus'][$menu_id]['menu_url'].'">'.$menu['menus'][$menu_id]['menu_name'].'</a>';
+            }
+                
+            if (isset($menu['parent_menus'][$menu_id])) {
+                $html .= '<ul class="dropdown-menu" role="menu">';
+                $html .= buildMenu($menu_id, $menu, $i, $strDeep);
+                $html .= '</ul>';
+            } 
+            $html .= '</li>';
+                
+            $i++;
+        }
+    }
+    return $html;
+}
+?>
+<div id="top-bar" class="top-bar" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+                <ul class="top-info text-center text-md-left">
+                    <li>
+                        <i class="fab fa-whatsapp"></i> <p class="info-text"><?php echo $site['phone_number']; ?></p>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i> <p class="info-text"><?php echo $site['email']; ?></p>
+                    </li>
+                </ul>
+            </div>
+            <!--/ Top info end -->
+
+            <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+                <ul class="list-unstyled">
+                    <li>
+                        <a title="Facebook" href="https://facebbok.com/lazalfatih">
+                            <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                        </a>
+                        <a title="Twitter" href="https://twitter.com/lazalfatih">
+                            <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                        </a>
+                        <a title="Instagram" href="https://instagram.com/lazalfatih">
+                            <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--/ Top social end -->
+        </div>
+        <!--/ Content row end -->
+    </div>
+    <!--/ Container end -->
+</div>
+<!--/ Topbar end -->
+<!-- Header start -->
+<header id="header" class="header-two">
+    <div class="site-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <!--<div class="logo">-->
+                        <div>
+                            <a class="d-block" href="index.php">
+                                <img loading="lazy" src="<?php echo base_url('assets/upload/image/'.$site['logo']);?>" alt="Constra">
+                            </a>
+                        </div><!-- logo end -->
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div id="navbar-collapse" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav ml-auto align-items-center">
+                                <?php echo buildMenu(0, $menusX, 1); ?>
+                                <li class="header-get-a-quote">
+                                    <a class="btn btn-primary" onclick="hitung_zakat()">Hitung Zakat</a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
+                    </nav>
                 </div>
+                <!--/ Col end -->
             </div>
+            <!--/ Row end -->
         </div>
-    </div>
+        <!--/ Container end -->
 
-    <!-- LOADER -->
-    <div id="preloader">
-        <div class="loading">
-            <div class="finger finger-1">
-                <div class="finger-item">
-                    <span></span><i></i>
-                </div>
-            </div>
-            <div class="finger finger-2">
-                <div class="finger-item">
-                    <span></span><i></i>
-                </div>
-            </div>
-            <div class="finger finger-3">
-                <div class="finger-item">
-                    <span></span><i></i>
-                </div>
-            </div>
-            <div class="finger finger-4">
-                <div class="finger-item">
-                    <span></span><i></i>
-                </div>
-            </div>
-            <div class="last-finger">
-                <div class="last-finger-item"><i></i></div>
-            </div>
-        </div>
     </div>
-    <!-- END LOADER -->
-
-    <header class="header header_style_01">
-        <nav class="megamenu navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('assets/upload/image/thumbs/' . $site['logo']); ?>" alt="image"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a class="active" href="<?php echo base_url(); ?>">Home</a></li>
-                        <li><a href="<?php echo base_url('feature'); ?>">Features </a></li>
-                        <li><a href="<?php echo base_url('domain'); ?>">Domain</a></li>
-                        <li><a href="<?php echo base_url('hosting'); ?>">Hosting</a></li>
-                        <li><a href="<?php echo base_url('pricing'); ?>">Pricing</a></li>
-                        <li><a href="<?php echo base_url('testimoni'); ?>">Testimonials</a></li>
-                        <li><a href="<?php echo base_url('contact'); ?>">Contact</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a class="btn-light btn-radius btn-brd log" href="#" data-toggle="modal" data-target="#login"><i class="flaticon-padlock"></i> Customer Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!--/ Navigation end -->
+</header>
+<!--/ Header end -->

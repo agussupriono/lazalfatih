@@ -3,42 +3,39 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
-     <!-- Site Metas -->
-    <title><?php echo $title;?></title>  
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
 
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="<?php echo base_url('assets/upload/image/'.$site['icon']) ?>" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="<?php echo base_url('assets/upload/image/'.$site['icon']) ?>">
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <title><?php echo $title;?></title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/css/bootstrap.min.css">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/style.css">
-    <!-- Colors CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/css/colors.css">
-    <!-- ALL VERSION CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/css/versions.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/css/responsive.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/css/custom.css">
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="<?php echo $site['metatext']; ?>">
+        <meta name="keywords" content="<?php echo $site['keywords']; ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-    <!-- Modernizer for Portfolio -->
-    <script src="<?php echo base_url();?>assets/front/default/js/modernizer.js"></script>
+        <!-- Favicon
+        ================================================== -->
+        <link rel="icon" type="image/png" href="<?php echo base_url('assets/upload/image/'.$site['icon']) ?>">
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <!-- CSS
+        ================================================== -->
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/plugins/bootstrap/bootstrap.min.css">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/plugins/fontawesome/css/all.min.css">
+        <!-- Animation -->
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/plugins/animate-css/animate.css">
+        <!-- slick Carousel -->
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/plugins/slick/slick.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/plugins/slick/slick-theme.css">
+        <!-- Colorbox -->
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/plugins/colorbox/colorbox.css">
+        <!-- Template styles-->
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/css/style.css">
 
-</head>
+    </head>
+<body>

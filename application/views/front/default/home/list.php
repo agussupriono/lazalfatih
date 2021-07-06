@@ -1,546 +1,325 @@
-<?php include('slider.php'); ?>
+<?php include ('slider.php'); ?>
 
-<div id="overviews" class="section wb">
-    <div class="container">
-        <div class="section-title row text-center">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>About</h3>
-                <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
-            </div>
-        </div><!-- end title -->
+<?php include ('program.php'); ?>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="message-box">
-                    <h4>2017 BEST WEB HOSTING COMPANY</h4>
-                    <h2>Awards Winner Support Center</h2>
-                    <p class="lead">Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
-
-                    <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis montes, nascetur ridiculus mus. Sed vitae rutrum neque. </p>
-
-                    <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Learn More</a>
-                </div><!-- end messagebox -->
-            </div><!-- end col -->
-
-            <div class="col-md-6">
-                <div class="post-media wow fadeIn">
-                    <img src="<?php echo base_url(); ?>assets/front/default/uploads/about_02.jpg" alt="" class="img-responsive img-rounded">
-                    <a href="http://www.youtube.com/watch?v=nrJtHemSPW4" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>
-                </div><!-- end media -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-
-        <hr class="invis"> 
-
-        <div class="row"> 
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                    <i class="flaticon-server global-radius effect-1 alignleft"></i>
-                    <h3>Unlimited Bandwidth</h3>
-                    <p>Our Landigoo responsive site template elements 100% compatible with all mobile devices and modern browsers! <small class="readmore"><a href="#">Read more</a></small></p>
-                </div><!-- end icon-wrapper -->
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                    <i class="flaticon-cloud-computing-1 global-radius effect-1 alignleft"></i>
-                    <h3>Unlimited Traffic</h3>
-                    <p>When you need anything about for Landigoo template, just drop an email or leave a feedback from TF!<small class="readmore"><a href="#">Read more</a></small></p>
-                </div><!-- end icon-wrapper -->
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                    <i class="flaticon-world-wide-web global-radius effect-1 alignleft"></i>
-                    <h3>1 Domain Free</h3>
-                    <p>We offer pixel perfect icons, graphic sources for high-resolution devices! Landigoo compatible retina display! <small class="readmore"><a href="#">Read more</a></small></p>
-                </div><!-- end icon-wrapper -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-
-        <hr class="hr3"> 
-
-        <div class="row"> 
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                    <i class="flaticon-cup global-radius effect-1 alignleft"></i>
-                    <h3>Awards Winner Support</h3>
-                    <p>Our Landigoo responsive site template elements 100% compatible with all mobile devices and modern browsers! <small class="readmore"><a href="#">Read more</a></small></p>
-                </div><!-- end icon-wrapper -->
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                    <i class="flaticon-cer-file-format global-radius effect-1 alignleft"></i>
-                    <h3>Free SSL Certifica</h3>
-                    <p>We offer pixel perfect icons, graphic sources for high-resolution devices! Landigoo compatible retina display! <small class="readmore"><a href="#">Read more</a></small></p>
-                </div><!-- end icon-wrapper -->
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                    <i class="flaticon-locked global-radius effect-1 alignleft"></i>
-                    <h3>High Security</h3>
-                    <p>When you need anything about for Landigoo template, just drop an email or leave a feedback from TF!<small class="readmore"><a href="#">Read more</a></small></p>
-                </div><!-- end icon-wrapper -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
-
-<div id="domain" class="parallax section noover" data-stellar-background-ratio="0.7" style="background-image:url('<?php echo base_url(); ?>assets/front/default/uploads/parallax_11.jpg');">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-5 col-sm-12">
-                <div class="customwidget text-left">
-                    <h1>Find Your Domain</h1>
-                    <p>With our awesome domain name search form, you can search any domain names with tons of extensions.</p>
-                    <ul class="list-inline">
-                        <li><i class="fa fa-check"></i> 20k Domains Sold in 2017</li>
-                        <li><i class="fa fa-check"></i> 4k Website Created</li>
-                    </ul>
-                    <!-- end list -->
-                    <a href="#hosting" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Hosting Packages</a>
-                </div>
-            </div>
-            <!-- end col -->
-
-            <div class="col-md-7">
-                <form class="checkdomain form-inline">
-                    <div class="checkdomain-wrapper">
-                        <div class="form-group">
-                            <label class="sr-only" for="domainnamehere">Domain name</label>
-                            <input type="text" class="form-control" id="domainnamehere" placeholder="Enter domain name here..">
-                            <button type="submit" class="btn btn-primary grd1"><i class="fa fa-search"></i></button>
-                        </div>
-                        <hr>
-                        <div class="clearfix"></div>
-                        <div class="checkbox checkbox-warning">
-                            <input id="domaincom" type="checkbox" class="styled" checked>
-                            <label for="domaincom">.com</label>
-                        </div>
-                        <div class="checkbox checkbox-warning">
-                            <input id="domainnet" type="checkbox" class="styled" checked>
-                            <label for="domainnet">.net</label>
-                        </div>
-                        <div class="checkbox checkbox-warning">
-                            <input id="domainorg" type="checkbox" class="styled">
-                            <label for="domainorg">.org</label>
-                        </div>
-                        <div class="checkbox checkbox-warning">
-                            <input id="domaintv" type="checkbox" class="styled">
-                            <label for="domaintv">.tv</label>
-                        </div>
-                        <div class="checkbox checkbox-warning">
-                            <input id="domaininfo" type="checkbox" class="styled">
-                            <label for="domaininfo">.info</label>
-                        </div>
-                    </div><!-- end checkdomain-wrapper -->
-                </form>
-            </div>
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
-
-<div id="hosting" class="section wb" style="background: rgb(248, 248, 248)">
-    <div class="container">
-        <div class="section-title text-center">
-            <h3>Hosting Packages</h3>
-            <p class="lead">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true generator<br> on the Internet. It uses a dictionary of over..</p>
-        </div><!-- end title -->
-
-        <div class="row dev-list text-center">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                <div class="widget clearfix">
-                    <img src="<?php echo base_url(); ?>assets/front/default/uploads/hosting_01.jpg" alt="" class="img-responsive">
-                    <div class="widget-title">
-                        <h3>Shared Hosting</h3>
-                        <small>Starting from $40/month</small>
-                    </div>
-                    <!-- end title -->
-                    <p>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true dont miss this one!</p>
-
-                    <hr> 
-
-                    <div class="footer-social">
-                        <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="Free Page Builder"><i class="flaticon-coding"></i></a>
-                        <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="WordPress Support"><i class="flaticon-wordpress-logo"></i></a>
-                        <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="1 Domain Free"><i class="flaticon-world-wide-web"></i></a>
-                        <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="50MB Bandwdith"><i class="flaticon-cloud-computing-1"></i></a>
-                    </div>
-
-                    <hr>
-
-                    <a href="#pricing" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Order Now</a>
-
-                </div><!--widget -->
-            </div><!-- end col -->
-
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                <div class="widget clearfix">
-                    <img src="<?php echo base_url(); ?>assets/front/default/uploads/hosting_02.jpg" alt="" class="img-responsive">
-                    <div class="widget-title">
-                        <h3>Reseller Hosting</h3>
-                        <small>Starting from $80/month</small>
-                    </div>
-                    <!-- end title -->
-                    <p>Internet lorem Ipsum generators on the tend to repeat predefined chunks as necessary, finally its release!</p>
-
-                    <hr> 
-
-                    <div class="footer-social">
-                        <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="Free Page Builder"><i class="flaticon-coding"></i></a>
-                        <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="WordPress Support"><i class="flaticon-wordpress-logo"></i></a>
-                        <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="1 Domain Free"><i class="flaticon-world-wide-web"></i></a>
-                        <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="150MB Bandwdith"><i class="flaticon-cloud-computing-1"></i></a>
-                        <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="Money Back Guarentee"><i class="flaticon-money"></i></a>
-                    </div>
-                    <hr>
-
-                    <a href="#pricing" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Order Now</a>
-
-                </div><!--widget -->
-            </div><!-- end col -->
-
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                <div class="widget clearfix">
-                    <img src="<?php echo base_url(); ?>assets/front/default/uploads/hosting_03.jpg" alt="" class="img-responsive">
-                    <div class="widget-title">
-                        <h3>Dedicated Server</h3>
-                        <small>Starting from $120/month</small>
-                    </div>
-                    <!-- end title -->
-                    <p>Predefined internet lorem Ipsum generators on the tend to repeat chunks as necessary, true and more..</p>
-
-                    <hr> 
-
-                    <div class="footer-social">
-                        <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="Free Page Builder"><i class="flaticon-coding"></i></a>
-                        <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="WordPress Support"><i class="flaticon-wordpress-logo"></i></a>
-                        <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="1 Domain Free"><i class="flaticon-world-wide-web"></i></a>
-                        <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="Unlimited Bandwdith"><i class="flaticon-cloud-computing-1"></i></a>
-                        <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="Money Back Guarentee"><i class="flaticon-money"></i></a>
-                        <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="24/7 Support"><i class="flaticon-lifesaver-security-sportive-tool"></i></a>
-                    </div>
-                    <hr>
-
-                    <a href="#pricing" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Order Now</a>
-
-                </div><!--widget -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
-
-<div class="section cl">
-    <div class="container">
-        <div class="row text-left stat-wrap">
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-hosting"></i></span>
-                <p class="stat_count">12000</p>
-                <h3>Hosted Sites</h3>
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-domain-registration"></i></span>
-                <p class="stat_count">24000</p>
-                <h3>Sold Domains</h3>
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-mail"></i></span>
-                <p class="stat_count">5000</p>
-                <h3>Email Accounts</h3>
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
-
-<div id="pricing" class="section lb">
-    <div class="container">
-        <div class="section-title text-center">
-            <h3>Ready to get started?</h3>
-            <p class="lead">Get the red carpet treatment <strong>just $39 per month!</strong> It is estimated that 3.5 million established by personal blogs.<br> From each other, we share paid WordPress themes WP Service...</p>
-        </div><!-- end title -->
-
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="message-box">
-                    <ul class="nav nav-pills nav-stacked" id="myTabs">
-                        <li class="active"><a href="#tab1" data-toggle="pill">Monthly Subscription</a></li>
-                        <li><a href="#tab2" data-toggle="pill">Yearly Subscription</a></li>
-                    </ul>
-                </div>
-            </div><!-- end col -->
+<section id="ts-service-area" class="ts-service-area pb-0">
+  <div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+          <h2 class="section-title">We Are Specialists In</h2>
+          <h3 class="section-sub-title">What We Do</h3>
         </div>
+    </div>
+    <!--/ Title row end -->
 
-        <hr class="invis">
+    <div class="row">
+        <div class="col-lg-4">
+          <div class="ts-service-box d-flex">
+              <div class="ts-service-box-img">
+                <img loading="lazy" src="<?php echo base_url();?>assets/front/default/images/icon-image/service-icon1.png" alt="service-icon">
+              </div>
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title"><a href="#">Home Construction</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+              </div>
+          </div><!-- Service 1 end -->
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="tab-content">
-                    <div class="tab-pane active fade in" id="tab1">
-                        <div class="row text-center">
-                            <div class="col-md-4">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>Shared Hosting</h2>
-                                        <h3>$85/month</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#contact" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>WordPress Hosting</h2>
-                                        <h3>$59/year</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-text">
-                                        <p>This is a perfect choice for small businesses and startups.</p>
-                                    </div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#contact" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
+          <div class="ts-service-box d-flex">
+              <div class="ts-service-box-img">
+                <img loading="lazy" src="<?php echo base_url();?>assets/front/default/images/icon-image/service-icon2.png" alt="service-icon">
+              </div>
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title"><a href="#">Building Remodels</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+              </div>
+          </div><!-- Service 2 end -->
 
-                            <div class="col-md-4">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>Reseller Hosting</h2>
-                                        <h3>$85/one-time</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#contact" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end pane -->
+          <div class="ts-service-box d-flex">
+              <div class="ts-service-box-img">
+                <img loading="lazy" src="<?php echo base_url();?>assets/front/default/images/icon-image/service-icon3.png"  alt="service-icon">
+              </div>
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title"><a href="#">Interior Design</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+              </div>
+          </div><!-- Service 3 end -->
 
-                    <div class="tab-pane fade" id="tab2">
-                        <div class="row text-center">
-                            <div class="col-md-6">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>Dedicated Server</h2>
-                                        <h3>$85/month</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#contact" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>VPS Server</h2>
-                                        <h3>$59/month</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-text">
-                                        <p>This is a perfect choice for small businesses and startups.</p>
-                                    </div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#contact" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end pane -->
-                </div><!-- end content -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
+        </div><!-- Col end -->
 
-<div id="testimonials" class="parallax section db parallax-off" style="background-image:url('<?php echo base_url(); ?>assets/front/default/uploads/parallax_04.jpg');">
-    <div class="container">
-        <div class="section-title text-center">
-            <h3>Testimonials</h3>
-            <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about Landigoo website template!</p>
-        </div><!-- end title -->
+        <div class="col-lg-4 text-center">
+          <img loading="lazy" class="img-fluid" src="<?php echo base_url();?>assets/front/default/images/services/service-center.jpg" alt="service-avater-image">
+        </div><!-- Col end -->
 
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="testi-carousel owl-carousel owl-theme">
-                    <div class="testimonial clearfix">
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                            <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                        </div>
-                        <div class="testi-meta">
-                            <img src="<?php echo base_url(); ?>assets/front/default/uploads/testi_01.png" alt="" class="img-responsive alignleft">
-                            <h4>James Fernando <small>- Manager of Racer</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
+        <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
+          <div class="ts-service-box d-flex">
+              <div class="ts-service-box-img">
+                <img loading="lazy" src="<?php echo base_url();?>assets/front/default/images/icon-image/service-icon4.png" alt="service-icon">
+              </div>
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title"><a href="#">Exterior Design</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+              </div>
+          </div><!-- Service 4 end -->
+
+          <div class="ts-service-box d-flex">
+              <div class="ts-service-box-img">
+                <img loading="lazy" src="<?php echo base_url();?>assets/front/default/images/icon-image/service-icon5.png" alt="service-icon">
+              </div>
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title"><a href="#">Renovation</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+              </div>
+          </div><!-- Service 5 end -->
+
+          <div class="ts-service-box d-flex">
+              <div class="ts-service-box-img">
+                <img loading="lazy" src="<?php echo base_url();?>assets/front/default/images/icon-image/service-icon6.png" alt="service-icon">
+              </div>
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title"><a href="#">Safety Management</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+              </div>
+          </div><!-- Service 6 end -->
+        </div><!-- Col end -->
+    </div><!-- Content row end -->
+
+  </div>
+  <!--/ Container end -->
+</section><!-- Service end -->
+
+<?php include ('projectgallery.php'); ?>
+
+<section class="content">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+          <h3 class="column-title">Testimonials</h3>
+
+          <div id="testimonial-slide" class="testimonial-slide">
+              <div class="item">
+                <div class="quote-item">
+                    <span class="quote-text">
+                      Question ran over her cheek When she reached the first hills of the Italic Mountains, she had a last
+                      view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the
+                      subline of her own road.
+                    </span>
+
+                    <div class="quote-item-footer">
+                      <img loading="lazy" class="testimonial-thumb" src="<?php echo base_url();?>assets/front/default/images/clients/testimonial1.png" alt="testimonial">
+                      <div class="quote-item-info">
+                          <h3 class="quote-author">Gabriel Denis</h3>
+                          <span class="quote-subtext">Chairman, OKT</span>
+                      </div>
                     </div>
-                    <!-- end testimonial -->
+                </div><!-- Quote item end -->
+              </div>
+              <!--/ Item 1 end -->
 
-                    <div class="testimonial clearfix">
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                            <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                        </div>
-                        <div class="testi-meta">
-                            <img src="<?php echo base_url(); ?>assets/front/default/uploads/testi_02.png" alt="" class="img-responsive alignleft">
-                            <h4>Jacques Philips <small>- Designer</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
+              <div class="item">
+                <div class="quote-item">
+                    <span class="quote-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion ullamco laboris
+                      nisi aliquip consequat.
+                    </span>
+
+                    <div class="quote-item-footer">
+                      <img loading="lazy" class="testimonial-thumb" src="<?php echo base_url();?>assets/front/default/images/clients/testimonial2.png" alt="testimonial">
+                      <div class="quote-item-info">
+                          <h3 class="quote-author">Weldon Cash</h3>
+                          <span class="quote-subtext">CFO, First Choice</span>
+                      </div>
                     </div>
-                    <!-- end testimonial -->
+                </div><!-- Quote item end -->
+              </div>
+              <!--/ Item 2 end -->
 
-                    <div class="testimonial clearfix">
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                            <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                        </div>
-                        <div class="testi-meta">
-                            <img src="<?php echo base_url(); ?>assets/front/default/uploads/testi_03.png" alt="" class="img-responsive alignleft">
-                            <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
+              <div class="item">
+                <div class="quote-item">
+                    <span class="quote-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion ullamco laboris
+                      nisi ut commodo consequat.
+                    </span>
+
+                    <div class="quote-item-footer">
+                      <img loading="lazy" class="testimonial-thumb" src="<?php echo base_url();?>assets/front/default/images/clients/testimonial3.png" alt="testimonial">
+                      <div class="quote-item-info">
+                          <h3 class="quote-author">Minter Puchan</h3>
+                          <span class="quote-subtext">Director, AKT</span>
+                      </div>
                     </div>
-                    <!-- end testimonial -->
-                    <div class="testimonial clearfix">
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                            <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                        </div>
-                        <div class="testi-meta">
-                            <img src="<?php echo base_url(); ?>assets/front/default/uploads/testi_01.png" alt="" class="img-responsive alignleft">
-                            <h4>James Fernando <small>- Manager of Racer</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
+                </div><!-- Quote item end -->
+              </div>
+              <!--/ Item 3 end -->
+
+          </div>
+          <!--/ Testimonial carousel end-->
+        </div><!-- Col end -->
+
+        <div class="col-lg-6 mt-5 mt-lg-0">
+
+          <h3 class="column-title">Happy Clients</h3>
+
+          <div class="row all-clients">
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="<?php echo base_url();?>assets/front/default/images/clients/client1.png" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 1 end -->
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="<?php echo base_url();?>assets/front/default/images/clients/client2.png" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 2 end -->
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="<?php echo base_url();?>assets/front/default/images/clients/client3.png" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 3 end -->
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="<?php echo base_url();?>assets/front/default/images/clients/client4.png" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 4 end -->
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="<?php echo base_url();?>assets/front/default/images/clients/client5.png" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 5 end -->
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="<?php echo base_url();?>assets/front/default/images/clients/client6.png" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 6 end -->
+
+          </div><!-- Clients row end -->
+
+        </div><!-- Col end -->
+
+    </div>
+    <!--/ Content row end -->
+  </div>
+  <!--/ Container end -->
+</section><!-- Content end -->
+
+<section class="subscribe no-padding">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+          <div class="subscribe-call-to-acton">
+              <h3>Can We Help?</h3>
+              <h4>(+9) 847-291-4353</h4>
+          </div>
+        </div><!-- Col end -->
+
+        <div class="col-lg-8">
+          <div class="ts-newsletter row align-items-center">
+              <div class="col-md-5 newsletter-introtext">
+                <h4 class="text-white mb-0">Newsletter Sign-up</h4>
+                <p class="text-white">Latest updates and news</p>
+              </div>
+
+              <div class="col-md-7 newsletter-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                      <label for="newsletter-email" class="content-hidden">Newsletter Email</label>
+                      <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Your your email and hit enter" autocomplete="off">
                     </div>
-                    <!-- end testimonial -->
+                </form>
+              </div>
+          </div><!-- Newsletter end -->
+        </div><!-- Col end -->
 
-                    <div class="testimonial clearfix">
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                            <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                        </div>
-                        <div class="testi-meta">
-                            <img src="<?php echo base_url(); ?>assets/front/default/uploads/testi_02.png" alt="" class="img-responsive alignleft">
-                            <h4>Jacques Philips <small>- Designer</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
-                    </div>
-                    <!-- end testimonial -->
+    </div><!-- Content row end -->
+  </div>
+  <!--/ Container end -->
+</section>
+<!--/ subscribe end -->
 
-                    <div class="testimonial clearfix">
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                            <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                        </div>
-                        <div class="testi-meta">
-                            <img src="<?php echo base_url(); ?>assets/front/default/uploads/testi_03.png" alt="" class="img-responsive alignleft">
-                            <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
-                    </div><!-- end testimonial -->
-                </div><!-- end carousel -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
+<section id="news" class="news">
+  <div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+          <h2 class="section-title">Work of Excellence</h2>
+          <h3 class="section-sub-title">Recent Projects</h3>
+        </div>
+    </div>
+    <!--/ Title row end -->
 
-<div id="support" class="section wb">
-    <div class="container">
-        <div class="section-title text-center">
-            <h3>Need Help? Sure we are Online!</h3>
-            <p class="lead">Let us give you more details about the special offer website you want us. Please fill out the form below. <br>We have million of website owners who happy to work with us!</p>
-        </div><!-- end title -->
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="contact_form">
-                    <div id="message"></div>
-                    <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
-                        <fieldset class="row-fluid">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <label class="sr-only">Select Service</label>
-                                <select name="select_service" id="select_service" class="selectpicker form-control" data-style="btn-white">
-                                    <option value="12">Select Package</option>
-                                    <option value="Web Design">Web Hosting</option>
-                                    <option value="Web Development">Shared Hosting</option>
-                                    <option value="Graphic Design">Reseller Hosting</option>
-                                    <option value="Others">Others</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <label class="sr-only">Select Country</label>
-                                <select name="select_price" id="select_price" class="selectpicker form-control" data-style="btn-white">
-                                    <option value="India">India</option>
-                                    <option value="Italy">Italy</option>
-                                    <option value="Holland">Holland</option>
-                                    <option value="Germany">Germany</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                                <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Get a Quote</button>
-                            </div>
-                        </fieldset>
-                    </form>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="news-single.html" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="<?php echo base_url();?>assets/front/default/images/news/news1.jpg" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                    <a href="news-single.html" class="d-inline-block">We Just Completes $17.6 million Medical Clinic in Mid-Missouri</a>
+                </h4>
+                <div class="latest-post-meta">
+                    <span class="post-item-date">
+                      <i class="fa fa-clock-o"></i> July 20, 2017
+                    </span>
                 </div>
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 1st post col end -->
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="news-single.html" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="<?php echo base_url();?>assets/front/default/images/news/news2.jpg" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                    <a href="news-single.html" class="d-inline-block">Thandler Airport Water Reclamation Facility Expansion Project Named</a>
+                </h4>
+                <div class="latest-post-meta">
+                    <span class="post-item-date">
+                      <i class="fa fa-clock-o"></i> June 17, 2017
+                    </span>
+                </div>
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 2nd post col end -->
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="news-single.html" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="<?php echo base_url();?>assets/front/default/images/news/news3.jpg" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                    <a href="news-single.html" class="d-inline-block">Silicon Bench and Cornike Begin Construction Solar Facilities</a>
+                </h4>
+                <div class="latest-post-meta">
+                    <span class="post-item-date">
+                      <i class="fa fa-clock-o"></i> Aug 13, 2017
+                    </span>
+                </div>
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 3rd post col end -->
+    </div>
+    <!--/ Content row end -->
+
+    <div class="general-btn text-center mt-4">
+        <a class="btn btn-primary" href="news-left-sidebar.html">See All Posts</a>
+    </div>
+
+  </div>
+  <!--/ Container end -->
+</section>
+<!--/ News end -->

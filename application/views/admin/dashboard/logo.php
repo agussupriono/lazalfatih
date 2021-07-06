@@ -60,7 +60,6 @@ echo validation_errors('<div class="alert alert-success">','</div>');
     
     <div class="col-md-6">
     	<label>Contoh Ukuran Logo:</label><br>
-        <!--<img src="<?php echo base_url('assets/front/img/site-logo.png');?>">-->
         <img src="<?php echo base_url('assets/upload/image/'.$site['logo']);?>">
         &nbsp; &nbsp; <a href="<?php echo base_url('assets/upload/image/'.$site['logo']);?>">Lihat Gambar</a>
     </div>

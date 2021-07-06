@@ -1,119 +1,120 @@
-        <div class="parallax section db parallax-off" style="background-image:url('<?php echo base_url();?>assets/front/default/uploads/parallax_02.jpg');">
-            <div class="container">
-                <div class="row logos">
-                    <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                        <a href="#"><img src="<?php echo base_url();?>assets/front/default/uploads/logo_01.png" alt="" class="img-repsonsive"></a>
+<footer id="footer" class="footer bg-overlay">
+    <div class="footer-main">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 col-md-6 footer-widget footer-about">
+                    <h3 class="widget-title">About Us</h3>
+                    <img loading="lazy" class="footer-logo" src="<?php echo base_url('assets/upload/image/'.$site['icon']) ?>" alt="LAZ Alfatih">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
+                        labore et dolore magna aliqua.</p>
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
+                        </ul>
+                    </div><!-- Footer social end -->
+                </div><!-- Col end -->
+
+                <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+                    <h3 class="widget-title">Working Hours</h3>
+                    <div class="working-hours">
+                        We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
+                        Hotline and Contact form.
+                        <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
+                        <br> Saturday: <span class="text-right">12:00 - 15:00</span>
+                        <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
                     </div>
-                    <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                        <a href="#"><img src="<?php echo base_url();?>assets/front/default/uploads/logo_02.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                        <a href="#"><img src="<?php echo base_url();?>assets/front/default/uploads/logo_03.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                        <a href="#"><img src="<?php echo base_url();?>assets/front/default/uploads/logo_04.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                        <a href="#"><img src="<?php echo base_url();?>assets/front/default/uploads/logo_05.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                        <a href="#"><img src="<?php echo base_url();?>assets/front/default/uploads/logo_06.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </div><!-- end section -->
+                </div><!-- Col end -->
 
-        <section class="section nopad cac text-center">
-            <a href="#"><h3>Interesting our awesome web design services? Just drop an email to us and get quote for free!</h3></a>
-        </section>
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
+                    <h3 class="widget-title">Services</h3>
+                    <ul class="list-arrow">
+                        <li><a href="service-single.html">Pre-Construction</a></li>
+                        <li><a href="service-single.html">General Contracting</a></li>
+                        <li><a href="service-single.html">Construction Management</a></li>
+                        <li><a href="service-single.html">Design and Build</a></li>
+                        <li><a href="service-single.html">Self-Perform Construction</a></li>
+                    </ul>
+                </div><!-- Col end -->
+            </div><!-- Row end -->
+        </div><!-- Container end -->
+    </div><!-- Footer main end -->
 
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="widget clearfix">
-                            <div class="widget-title">
-                                <img src="<?php echo base_url();?>assets/front/default/images/logos/logo-hosting-light.png" alt="">
-                                <small>Web Hosting Template</small>
-                            </div>
-                            <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
-                            <p>Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
-                        </div><!-- end clearfix -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="widget clearfix">
-                            <div class="widget-title">
-                                <h3>Information Link</h3>
-                            </div>
-                            <ul class="footer-links">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Faq</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul><!-- end links -->
-                        </div><!-- end clearfix -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="widget clearfix">
-                            <div class="widget-title">
-                                <h3>Contact Details</h3>
-                            </div>
-
-                            <ul class="footer-links">
-                                <li><a href="mailto:#">info@yoursite.com</a></li>
-                                <li><a href="#">www.yoursite.com</a></li>
-                                <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
-                                <li>+61 3 8376 6284</li>
-                            </ul><!-- end links -->
-                        </div><!-- end clearfix -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-2 col-sm-2 col-xs-12">
-                        <div class="widget clearfix">
-                            <div class="widget-title">
-                                <h3>Social</h3>
-                            </div>
-                            <ul class="footer-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i> 22.543 Likes</a></li>
-                                <li><a href="#"><i class="fa fa-github"></i> 128 Projects</a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i> 12.860 Followers</a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i> 3312 Shots</a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i>3331 Pins</a></li>
-                            </ul><!-- end links -->
-                        </div><!-- end clearfix -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </footer><!-- end footer -->
-
-        <div class="copyrights">
-            <div class="container">
-                <div class="footer-distributed">
-                    <div class="footer-left">                   
-                        <p class="footer-company-name">All Rights Reserved. &copy; 2018 Design By: <a href="https://html.design/">html design</a> Distributed By: <a href="https://themewagon.com/">ThemeWagon</a></p> 
-                    </div>
-
-                    <div class="footer-right">
-                        <form method="get" action="#">
-                            <input placeholder="Subscribe our newsletter.." name="search">
-                            <i class="fa fa-envelope-o"></i>
-                        </form>
+    <div class="copyright">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="copyright-info">
+                        <span>Copyright &copy; <script>
+                            document.write(new Date().getFullYear())
+                            </script>, Designed &amp; Developed by <a href="https://themefisher.com">Themefisher</a></span>
                     </div>
                 </div>
-            </div><!-- end container -->
-        </div><!-- end copyrights -->
 
-        <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+                <div class="col-md-6">
+                    <div class="footer-menu text-center text-md-right">
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="team.html">Our people</a></li>
+                            <li><a href="faq.html">Faq</a></li>
+                            <li><a href="news-left-sidebar.html">Blog</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- Row end -->
 
-        <script src="<?php echo base_url();?>assets/front/default/js/jquery-2.2.3.min.js"></script>
-        <!-- ALL JS FILES -->
-        <script src="<?php echo base_url();?>assets/front/default/js/all.js"></script>
-        <!-- ALL PLUGINS -->
-        <script src="<?php echo base_url();?>assets/front/default/js/custom.js"></script>
+            <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+                <button class="btn btn-primary" title="Back to Top">
+                    <i class="fa fa-angle-double-up"></i>
+                </button>
+            </div>
 
-    </body>
+        </div><!-- Container end -->
+    </div><!-- Copyright end -->
+</footer><!-- Footer end -->
+
+
+<!-- Javascript Files
+================================================== -->
+
+<!-- initialize jQuery Library -->
+<script src="<?php echo base_url();?>assets/front/default/plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap jQuery -->
+<script src="<?php echo base_url();?>assets/front/default/plugins/bootstrap/bootstrap.min.js" defer></script>
+<!-- Slick Carousel -->
+<script src="<?php echo base_url();?>assets/front/default/plugins/slick/slick.min.js"></script>
+<script src="<?php echo base_url();?>assets/front/default/plugins/slick/slick-animation.min.js"></script>
+<!-- Color box -->
+<script src="<?php echo base_url();?>assets/front/default/plugins/colorbox/jquery.colorbox.js"></script>
+<!-- shuffle -->
+<script src="<?php echo base_url();?>assets/front/default/plugins/shuffle/shuffle.min.js" defer></script>
+
+<!-- Google Map API Key-->
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>-->
+<!-- Google Map Plugin-->
+<!--<script src="<?php echo base_url();?>assets/front/default/plugins/google-map/map.js" defer></script>-->
+
+<!-- Template custom -->
+<script src="<?php echo base_url();?>assets/front/default/js/script.js"></script>
+
+</div><!-- Body inner end -->
+<script>
+    $(document).ready(function () {
+         $("body").css("background-color", "<?php echo $site['color']; ?>");
+         $("#header").css("background-color", "<?php echo $site['color']; ?>");
+         $(".header-two").css("background", "<?php echo $site['color']; ?>");
+         $(".site-navigation").css("background-color", "<?php echo $site['color']; ?>");
+         $(".top-bar").css("background-color", "#38b7c1");
+         $(".top-bar .top-info").css("color", "#fff");
+         $(".top-bar .top-social ul li a").css("color", "#fff");
+    });
+</script>
+</body>
+
 </html>
