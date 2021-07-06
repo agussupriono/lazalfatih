@@ -89,7 +89,7 @@ function buildMenu($parent, $menu, $i=1, $strDeep="") {
                         <!--<div class="logo">-->
                         <div>
                             <a class="d-block" href="index.php">
-                                <img loading="lazy" src="<?php echo base_url('assets/upload/image/'.$site['logo']);?>" alt="Constra">
+                                <img loading="lazy" src="<?php echo base_url('assets/upload/image/'.$site['logo']);?>" alt="LAZ Al Fatih" style="width: 85%" >
                             </a>
                         </div><!-- logo end -->
 

@@ -167,9 +167,9 @@
         margin-left: 0px;
     }
 </style>
-<div class="container">
+<div class="container" style="margin-top: -40px;">
     <div class="row">
-        <div id="items-title" class="col-12 items-title">
+        <div id="items-title" class="col-12 items-title" style="margin-left: 15px;">
             <h2 class="section-sub-title-h1">BUTUH PERTOLONGAN SEGERA</h2>
         </div>
         <div class="items-program slick-slider" id="items-program">
