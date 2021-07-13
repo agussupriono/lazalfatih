@@ -37,5 +37,60 @@
         <!-- Template styles-->
         <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/css/style.css">
 
+        <style>
+            .lds-facebook-all{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: #ddd;
+                z-index: 9998;
+                display: block;
+            }
+            .lds-facebook {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -50px;
+                margin-left: -50px;
+                width: 100%;
+                height: 100%;
+                z-index: 9999;
+              }
+              .lds-facebook div {
+                display: inline-block;
+                position: absolute;
+                left: 8px;
+                width: 16px;
+                background: #fff;
+                animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+              }
+              .lds-facebook div:nth-child(1) {
+                left: 8px;
+                animation-delay: -0.24s;
+              }
+              .lds-facebook div:nth-child(2) {
+                left: 32px;
+                animation-delay: -0.12s;
+              }
+              .lds-facebook div:nth-child(3) {
+                left: 56px;
+                animation-delay: 0;
+              }
+              @keyframes lds-facebook {
+                0% {
+                  top: 8px;
+                  height: 64px;
+                }
+                50%, 100% {
+                  top: 24px;
+                  height: 32px;
+                }
+              }
+        </style>
     </head>
-<body>
+<body style='overflow-x: hidden;'>
+    <div class="lds-facebook-all">
+    <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>

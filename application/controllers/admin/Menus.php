@@ -32,13 +32,6 @@ class Menus extends CI_Controller {
             $config['max_size'] = '1000'; // KB			
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('image')) {
-
-//                $data = array('title' => 'Create Menu - ' . $site['nameweb'],
-//                    'site' => $site,
-//                    'parent' => $parent,
-//                    'error' => $this->upload->display_errors(),
-//                    'isi' => 'admin/menus/create');
-//                $this->load->view('admin/layout/wrapper', $data);
                 
                 $i = $this->input;
 //                $slugProduct = url_title($this->input->post('menu_name'), 'dash', TRUE);

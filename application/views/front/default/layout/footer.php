@@ -101,12 +101,7 @@
          $(".top-bar").css("background-color", "#38b7c1");
          $(".top-bar .top-info").css("color", "#fff");
          $(".top-bar .top-social ul li a").css("color", "#fff");
-         
-//         if($(window).width()<575){
-//             $(".site-navigation").css("top", "28px", "height", "70px");
-//         } else {
-//             $(".site-navigation").css("top", "0", "height", "auto");
-//         }
+         $(".lds-facebook-all").fadeOut();
     });
 </script>
 </body>

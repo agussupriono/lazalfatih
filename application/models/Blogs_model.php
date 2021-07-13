@@ -30,6 +30,17 @@
             $query = $this->db->get();
             return $query->result_array();
         }
+        // Listing Blogs Publish
+        public function listPBSPub() {
+            $this->db->select('*');
+            $this->db->from('blogs');
+            $this->db->where(array('status' => 'publish', 'blogs_position' => 'BPS'));
+            $this->db->join('admins','admins.admin_id = blogs.user_id','LEFT');            
+            $this->db->join('categories','categories.category_id = blogs.category_id','LEFT');
+            $this->db->order_by('blog_id','ASC');
+            $query = $this->db->get();
+            return $query->result_array();
+        }
 
         // Last Blogs Publish
         public function listLastBlogsPub() {

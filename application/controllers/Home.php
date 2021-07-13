@@ -9,24 +9,26 @@ class Home extends CI_Controller {
 
         $site = $this->mConfig->list_config();
         $sliderhome = $this->mGalleries->listGalleriesPubHome();
-//        $blogs = $this->mBlogs->listBlogsPub();
-        $products = $this->mProducts->listProductsPub();
-        $clients = $this->mClients->listClients();
         $menus = $this->mMenus->listMenus();
-        $obusines = $this->mBlogs->listOurBusinessPub();
-        $subsidiaries = $this->mBlogs->listSubsidiariesPub();
-        $project = $subs = $this->mBlogs->listProjectPub();
+        $prog = $this->mBlogs->listPBSPub();
+//        $blogs = $this->mBlogs->listBlogsPub();
+//        $products = $this->mProducts->listProductsPub();
+//        $clients = $this->mClients->listClients();
+//        $obusines = $this->mBlogs->listOurBusinessPub();
+//        $subsidiaries = $this->mBlogs->listSubsidiariesPub();
+//        $project = $subs = $this->mBlogs->listProjectPub();
 
         $data = array('title' => 'Home - ' . $site['nameweb'],
             'site' => $site,
             'sliderhome' => $sliderhome,
-//            'blogs' => $blogs,
-            'products' => $products,
-            'clients' => $clients,
             'menus' => $menus,
-            'obusines' => $obusines,
-            'subsidiaries' => $subsidiaries,
-            'project' => $project,
+            'prog' => $prog,
+//            'blogs' => $blogs,
+//            'products' => $products,
+//            'clients' => $clients,
+//            'obusines' => $obusines,
+//            'subsidiaries' => $subsidiaries,
+//            'project' => $project,
             'isi' => 'front/'.$site['theme'].'/home/list');
         $this->load->view('front/'.$site['theme'].'/layout/wrapper', $data);
     }

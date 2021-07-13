@@ -4,6 +4,7 @@ jQuery(function ($) {
 	/* ----------------------------------------------------------- */
 	/*  Fixed header
 	/* ----------------------------------------------------------- */
+        var position = $(window).scrollTop(); //agus edit, minus tinggi logo
 	$(window).on('scroll', function () {
 
 		// fixedHeader on scroll
@@ -15,19 +16,34 @@ jQuery(function ($) {
 			var headerTwoELement = $('.header-two .site-navigation');
 
 			if ($(window).scrollTop() > headerTopBar + headerOneTopSpace) {
-				$(headerOneELement).addClass('navbar-fixed');
+                                $(headerOneELement).addClass('navbar-fixed');
 				$('.header-one').css('margin-bottom', headerOneELement.outerHeight());
 			} else {
 				$(headerOneELement).removeClass('navbar-fixed');
 				$('.header-one').css('margin-bottom', 0);
 			}
 			if ($(window).scrollTop() > headerTopBar) {
-				$(headerTwoELement).addClass('navbar-fixed');
-				$('.header-two').css('margin-bottom', headerTwoELement.outerHeight());
+                                $(headerTwoELement).addClass('navbar-fixed');
+				$('.header-two').css('margin-bottom', headerTwoELement.outerHeight()); 
 			} else {
 				$(headerTwoELement).removeClass('navbar-fixed');
 				$('.header-two').css('margin-bottom', 0);
 			}
+                        
+                        //agus edit, minus tinggi logo
+//                        if($(window).width()<475){
+                        if($(window).width()>319 && $(window).width()<481){
+                            var scroll = $(window).scrollTop();
+                            if(scroll > position) {
+                                $('.navbar-fixed').css('top', '25px'); 
+                            } else {
+                                $('.navbar-fixed').css('top', '0'); 
+                            }
+                        }
+                        position = scroll;
+                        
+                        //-----------------------------
+                        
 		}
 		fixedHeader();
 

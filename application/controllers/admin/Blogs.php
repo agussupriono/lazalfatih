@@ -10,7 +10,7 @@ class Blogs extends CI_Controller {
         $site = $this->mConfig->list_config();
         $blogs = $this->mBlogs->listBlogs();
 
-        $data = array('title' => 'List Blogs - ' . $site['nameweb'],
+        $data = array('title' => 'List Program Donasi - ' . $site['nameweb'],
             'blogs' => $blogs,
             'isi' => 'admin/blogs/list');
         $this->load->view('admin/layout/wrapper', $data);
@@ -46,6 +46,7 @@ class Blogs extends CI_Controller {
                 'order_category' => $i->post('order_category'),
                 'category_description' => $i->post('category_description'),
                 'date_category' => $i->post('date_category'),
+                'parent_category_id' => $i->post('parent_category_id')
             );
             $this->mCategories->createCategory($data);
             $this->session->set_flashdata('sukses', 'Success');
@@ -69,15 +70,9 @@ class Blogs extends CI_Controller {
 
             $config['upload_path'] = './assets/upload/image/';
             $config['allowed_types'] = 'gif|jpg|png';
-            $config['max_size'] = '1000'; // KB			
+            $config['max_size'] = '5000'; // KB			
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('image')) {
-//                $data = array('title' => 'Create Blog - ' . $site['nameweb'],
-//                    'site' => $site,
-//                    'categories' => $categories,
-//                    'error' => $this->upload->display_errors(),
-//                    'isi' => 'admin/blogs/create');
-//                $this->load->view('admin/layout/wrapper', $data);
                 
                 $upload_data = array('uploads' => $this->upload->data());
                 
@@ -88,11 +83,18 @@ class Blogs extends CI_Controller {
                     'user_id' => $this->session->userdata('id'),
                     'title' => $i->post('title'),
                     'content' => $i->post('content'),
+                    'info' => $i->post('info'),
                     'date_post' => $i->post('date_post'),
                     'status' => $i->post('status'),
                     'keywords' => $i->post('keywords'),
                     'image' => '',
-                    'bs_class' => $i->post('bs_class')
+                    'bs_class' => $i->post('bs_class'),
+                    'blog_by' => $i->post('blog_by'),
+                    'blogs_position' => $i->post('blogs_position'),
+                    'date_start' => $this->mPublic->reverse_date($i->post('date_start')),
+                    'date_end' => $this->mPublic->reverse_date($i->post('date_end')),
+                    'target_donation' => str_replace(",","",$i->post('target_donation')),
+                    'title_long' => $i->post('title_long')
                 );
 
                 $this->mBlogs->createBlog($data);
@@ -120,11 +122,18 @@ class Blogs extends CI_Controller {
                     'user_id' => $this->session->userdata('id'),
                     'title' => $i->post('title'),
                     'content' => $i->post('content'),
+                    'info' => $i->post('info'),
                     'date_post' => $i->post('date_post'),
                     'status' => $i->post('status'),
                     'keywords' => $i->post('keywords'),
                     'image' => $upload_data['uploads']['file_name'],
-                    'bs_class' => $i->post('bs_class')
+                    'bs_class' => $i->post('bs_class'),
+                    'blog_by' => $i->post('blog_by'),
+                    'blogs_position' => $i->post('blogs_position'),
+                    'date_start' => $this->mPublic->reverse_date($i->post('date_start')),
+                    'date_end' => $this->mPublic->reverse_date($i->post('date_end')),
+                    'target_donation' => str_replace(",","",$i->post('target_donation')),
+                    'title_long' => $i->post('title_long')
                 );
 
                 $this->mBlogs->createBlog($data);
@@ -133,7 +142,7 @@ class Blogs extends CI_Controller {
             }
         }
         // Default page
-        $data = array('title' => 'Create Blogs - ' . $site['nameweb'],
+        $data = array('title' => 'Create Program - ' . $site['nameweb'],
             'site' => $site,
             'categories' => $categories,
             'isi' => 'admin/blogs/create');
@@ -148,6 +157,7 @@ class Blogs extends CI_Controller {
     public function edit_category($category_id) {
 
         $site = $this->mConfig->list_config();
+        $categories = $this->mCategories->listCategories();
         $category = $this->mCategories->detailCategory($category_id);
         $endCategory = $this->mCategories->endCategory();
 
@@ -160,6 +170,7 @@ class Blogs extends CI_Controller {
 
             $data = array('title' => 'Edit Category - ' . $category['category_name'],
                 'category' => $category,
+                'categories' => $categories,
                 'isi' => 'admin/categories/edit');
             $this->load->view('admin/layout/wrapper', $data);
         } else {
@@ -197,28 +208,27 @@ class Blogs extends CI_Controller {
                 $config['max_size'] = '1000'; // KB			
                 $this->load->library('upload', $config);
                 if (!$this->upload->do_upload('image')) {
-
-//                    $data = array('title' => 'Edit Blog - ' . $blog['title'],
-//                        'category' => $category,
-//                        'blog' => $blog,
-//                        'error' => $this->upload->display_errors(),
-//                        'isi' => 'admin/blogs/edit');
-//                    $this->load->view('admin/layout/wrapper', $data);
                     
                     $i = $this->input;
 
-//                    $slugBlog = $endBlog['blog_id'] . '-' . url_title($i->post('title'), 'dash', TRUE);
                     $data = array('blog_id' => $blog['blog_id'],
                         'slug_blog' => $blog['slug_blog'],
                         'user_id' => $this->session->userdata('id'),
                         'category_id' => $i->post('category_id'),
                         'title' => $i->post('title'),
                         'content' => $i->post('content'),
+                        'info' => $i->post('info'),
                         'date_post' => $i->post('date_post'),
                         'status' => $i->post('status'),
                         'keywords' => $i->post('keywords'),
                         'image' => '',
-                        'bs_class' => $i->post('bs_class')
+                        'bs_class' => $i->post('bs_class'),
+                        'date_start' => $this->mPublic->reverse_date($i->post('date_start')),
+                        'date_end' => $this->mPublic->reverse_date($i->post('date_end')),
+                        'blog_by' => $i->post('blog_by'),
+                        'target_donation' => str_replace(",", "", $i->post('target_donation')),
+                        'blogs_position' => $i->post('blogs_position'),
+                        'title_long' => $i->post('title_long')
                     );
                     $this->mBlogs->editBlog($data);
                     $this->session->set_flashdata('sukses', 'Biz telah diedit dan gambar telah diganti');
@@ -252,11 +262,18 @@ class Blogs extends CI_Controller {
                         'category_id' => $i->post('category_id'),
                         'title' => $i->post('title'),
                         'content' => $i->post('content'),
+                        'info' => $i->post('info'),
                         'date_post' => $i->post('date_post'),
                         'status' => $i->post('status'),
                         'keywords' => $i->post('keywords'),
                         'image' => $upload_data['uploads']['file_name'],
-                        'bs_class' => $i->post('bs_class')
+                        'bs_class' => $i->post('bs_class'),
+                        'date_start' => $this->mPublic->reverse_date($i->post('date_start')),
+                        'date_end' => $this->mPublic->reverse_date($i->post('date_end')),
+                        'blog_by' => $i->post('blog_by'),
+                        'target_donation' => str_replace(",", "", $i->post('target_donation')),
+                        'blogs_position' => $i->post('blogs_position'),
+                        'title_long' => $i->post('title_long')
                     );
                     $this->mBlogs->editBlog($data);
                     $this->session->set_flashdata('sukses', 'Biz telah diedit dan gambar telah diganti');
@@ -271,10 +288,17 @@ class Blogs extends CI_Controller {
                     'category_id' => $i->post('category_id'),
                     'title' => $i->post('title'),
                     'content' => $i->post('content'),
+                    'info' => $i->post('info'),
                     'date_post' => $i->post('date_post'),
                     'status' => $i->post('status'),
                     'keywords' => $i->post('keywords'),
                     'bs_class' => $i->post('bs_class'),
+                    'date_start' => $this->mPublic->reverse_date($i->post('date_start')),
+                    'date_end' => $this->mPublic->reverse_date($i->post('date_end')),
+                    'blog_by' => $i->post('blog_by'),
+                    'target_donation' => str_replace(",", "", $i->post('target_donation')),
+                    'blogs_position' => $i->post('blogs_position'),
+                    'title_long' => $i->post('title_long')
                 );
                 $this->mBlogs->editBlog($data);
                 $this->session->set_flashdata('sukses', 'Success');

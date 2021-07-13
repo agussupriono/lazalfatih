@@ -88,7 +88,7 @@ function buildMenu($parent, $menu, $i=1, $strDeep="") {
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
                         <!--<div class="logo">-->
                         <div>
-                            <a class="d-block" href="index.php">
+                            <a class="d-block" href="<?php echo base_url(); ?>">
                                 <img loading="lazy" src="<?php echo base_url('assets/upload/image/'.$site['logo']);?>" alt="LAZ Al Fatih" style="width: 85%" >
                             </a>
                         </div><!-- logo end -->

@@ -144,5 +144,6 @@ $autoload['model'] = array('config_model' => 'mConfig',
     'products_model' => 'mProducts',
     'price_model' => 'mPrice',
     'menus_model' => 'mMenus',
-    'themes_model' => 'mThemes'
+    'themes_model' => 'mThemes',
+    'public_functions' => 'mPublic'
 );
