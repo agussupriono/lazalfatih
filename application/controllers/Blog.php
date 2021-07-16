@@ -92,6 +92,27 @@ class Blog extends CI_Controller {
             'isi' => 'front/'.$site['theme'].'/blog/read');
         $this->load->view('front/'.$site['theme'].'/layout/wrapper', $data);
     }
+    
+    public function donasi($slugBlog) {
+
+        $site = $this->mConfig->list_config();
+        $blog = $this->mBlogs->readBlog($slugBlog);
+        $categories = $this->mCategories->listCategories();
+        $comments = $this->mBlogs->listCommentsByBlog($slugBlog);
+        $blogId = $blog['blog_id'];
+        $count = $this->mBlogs->countCommentByBlog($blogId);
+        $menus = $this->mMenus->listMenus();
+
+        $data = array('title' => $blog['title'] . ' - ' . $site['nameweb'],
+            'site' => $site,
+            'blog' => $blog,
+            'categories' => $categories,
+            'count' => $count,
+            'menus' => $menus,
+            'comments' => $comments,
+            'isi' => 'front/'.$site['theme'].'/blog/donasi');
+        $this->load->view('front/'.$site['theme'].'/layout/wrapper', $data);
+    }
 
     // Reply Blog
     public function replyBlog() {

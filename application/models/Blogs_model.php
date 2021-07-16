@@ -41,6 +41,18 @@
             $query = $this->db->get();
             return $query->result_array();
         }
+        // Listing Blogs Publish Non New / Donasi
+        public function listAllDonasiPub() {
+            $this->db->select('*');
+            $this->db->from('blogs');
+            $this->db->where(array('blogs.status' => 'publish', 'blogs.category_id<>' => '1'));
+            $this->db->join('admins','admins.admin_id = blogs.user_id','LEFT');            
+            $this->db->join('categories','categories.category_id = blogs.category_id','LEFT');
+            $this->db->limit(5);
+            $this->db->order_by('blogs.blog_id','DESC');
+            $query = $this->db->get();
+            return $query->result_array();
+        }
 
         // Last Blogs Publish
         public function listLastBlogsPub() {

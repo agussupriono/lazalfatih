@@ -4,7 +4,7 @@ jQuery(function ($) {
 	/* ----------------------------------------------------------- */
 	/*  Fixed header
 	/* ----------------------------------------------------------- */
-        var position = $(window).scrollTop(); //agus edit, minus tinggi logo
+//        var position = $(window).scrollTop(); //agus edit, minus tinggi logo
 	$(window).on('scroll', function () {
 
 		// fixedHeader on scroll
@@ -32,15 +32,15 @@ jQuery(function ($) {
                         
                         //agus edit, minus tinggi logo
 //                        if($(window).width()<475){
-                        if($(window).width()>319 && $(window).width()<481){
-                            var scroll = $(window).scrollTop();
-                            if(scroll > position) {
-                                $('.navbar-fixed').css('top', '25px'); 
-                            } else {
-                                $('.navbar-fixed').css('top', '0'); 
-                            }
-                        }
-                        position = scroll;
+//                        if($(window).width()>319 && $(window).width()<481){
+//                            var scroll = $(window).scrollTop();
+//                            if(scroll > position) {
+//                                $('.navbar-fixed').css('top', '25px'); 
+//                            } else {
+//                                $('.navbar-fixed').css('top', '0'); 
+//                            }
+//                        }
+//                        position = scroll;
                         
                         //-----------------------------
                         

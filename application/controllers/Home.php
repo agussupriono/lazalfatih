@@ -11,6 +11,8 @@ class Home extends CI_Controller {
         $sliderhome = $this->mGalleries->listGalleriesPubHome();
         $menus = $this->mMenus->listMenus();
         $prog = $this->mBlogs->listPBSPub();
+        $allprog = $this->mBlogs->listAllDonasiPub();
+        
 //        $blogs = $this->mBlogs->listBlogsPub();
 //        $products = $this->mProducts->listProductsPub();
 //        $clients = $this->mClients->listClients();
@@ -23,6 +25,7 @@ class Home extends CI_Controller {
             'sliderhome' => $sliderhome,
             'menus' => $menus,
             'prog' => $prog,
+            'allprog' => $allprog,
 //            'blogs' => $blogs,
 //            'products' => $products,
 //            'clients' => $clients,
