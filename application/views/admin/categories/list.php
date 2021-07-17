@@ -115,7 +115,11 @@ function buildCatGrid($parent, $catGridArr, $i=1, $strDeep="") {
                         <div class="form-group input-group">
                             <span class="input-group-addon"><i class="fa fa-list"></i></span>
                             <input name="order_category" type="number" autofocus required class="form-control" placeholder="Order Category"  value="<?php echo set_value('order_category') ?>">
-                        </div>              
+                        </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="fa fa-tag"></i></span>
+                            <input type="text" name="button_title" class="form-control" placeholder="Title for transaction button"  value="<?php echo set_value('button_title') ?>">
+                        </div>
                         <div class="form-group">
                             <textarea name="category_description" rows="5" class="form-control" placeholder="Description"><?php echo set_value('category_description') ?></textarea>
                         </div>            

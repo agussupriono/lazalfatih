@@ -19,6 +19,15 @@
                         $strLink = base_url().'blog/donasi/'.$prodpbs["slug_blog"];
                         break;
                 }
+                
+                if ($prodpbs['date_end']!='0000-00-00 00:00:00'){
+                    $sisahari = $this->mPublic->dateDifference(date('Y-m-d'),$prodpbs['date_end'],'%d hari lagi');
+                } else {
+                    $sisahari = '<img style="width: 21px; float: right;" src="'.base_url().'assets/front/default/images/infinity-32x32.png" />';
+                }
+
+                $danaterkumpul = 'Rp. 0';
+                $donatur = '0 Donatur';
                 ?>
             <div class="card">
                 <a style="display:block; background-color: transparent;" href='<?php echo $strLink;?>'>
@@ -47,11 +56,11 @@
                                 <div class="lsdp-row no-gutters campaign-verification">
                                     <div class="campaign-verification-1 col-5">
                                         <small style="display:block;">Terkumpul</small>
-                                        <span class="lsdd-theme-color font-weight-medium">Rp 0</span>
+                                        <span class="lsdd-theme-color font-weight-medium"><?php echo $danaterkumpul; ?></span>
                                     </div>
                                     <div class="campaign-verification-2 col-6 text-right">
                                         <small style="display:block;">Sisa Waktu</small>
-                                        <span>21 Hari</span>                                        
+                                        <span><?php echo $sisahari; ?></span>                                        
                                     </div>
                                 </div>
                             </div>

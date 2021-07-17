@@ -166,29 +166,37 @@
                             <div class="col-6">
                                 <small style="display:block;">Terkumpul</small>
                                 <span class="lsdd-theme-color text-bold">
-                                    Rp 0                                
+                                    <?php echo $danaterkumpul; ?>                                
                                 </span>
                             </div>
                             <!-- Campaign Target -->
                             <div class="col-6 text-right">
                                 <small style="display:block;">Target</small>
-                                Rp 10.000                            
+                                <?php echo 'Rp. '. number_format($blog["target_donation"],0); ?>                           
                             </div>
                         </div>
 
                         <!-- Campaign Action -->
                         <div class="lsdp-row no-gutters campaign-target px-15">
                             <!-- Contributor Button -->
-                            <a href="#" class="lsdp-btn lsdd-btn btn-primary btn-block lsdd-addtocart lsdp-mb-10 btn">Kurban Sekarang</a>
+                            <a href="#" class="lsdp-btn lsdd-btn btn-primary btn-block lsdd-addtocart lsdp-mb-10 btn">
+                                <?php echo $blog["button_title"]; ?>
+                            </a>
 
                             <!-- Contributor Counter -->
                             <div class="col-6">
-                                <p class="lsdp-mt-10">0 Donatur</p>
+                                <p class="lsdp-mt-10">
+                                    <?php echo $donatur; ?>
+                                </p>
                             </div>
 
                             <!-- Campaign Time Left -->
                             <div class="col-6 text-right">
-                                <p class="lsdp-mt-10">14 Sisa Hari</p>
+                                <p class="lsdp-mt-10">
+                                <?php 
+                                    echo $sisahari;
+                                ?>
+                                </p>
                             </div>
                         </div>
 

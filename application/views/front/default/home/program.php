@@ -1,12 +1,13 @@
 <!-- Program -->
 <link rel="stylesheet" href="<?php echo base_url();?>assets/front/default/css/program.css">
+<script src="<?php echo base_url(); ?>assets/jquery/jquery-3.5.1.min.js"></script>
         
 <div class="container" style="margin-top: -40px; margin-bottom: 20px;">
     <div class="row">
-        <div id="items-title" class="col-12 items-title" style="margin-left: 15px;">
+        <div id="items-title" class="items-title" style="margin-left: 15px;">
             <h2 class="section-sub-title-h1">BUTUH PERTOLONGAN SEGERA</h2>
         </div>
-        <div class="items-program slick-slider" id="items-program">
+        <div class="items-program slick-slider>" id="items-program">
             <?php
             $jml = count($prog);
             $strLink = "";
@@ -19,15 +20,27 @@
                         $strLink = base_url().'blog/donasi/'.$prodpbs["slug_blog"];
                         break;
                 }
+                
+                if ($prodpbs['date_end']!='0000-00-00 00:00:00'){
+                    $sisahari = $this->mPublic->dateDifference(date('Y-m-d'),$prodpbs['date_end'],'%d hari lagi');
+                } else {
+                    $sisahari = '<img style="width: 21px; float: right;" src="'.base_url().'assets/front/default/images/infinity-32x32.png" />';
+                }
+
+                $danaterkumpul = 'Rp. 0';
+                $donatur = '0 Donatur';
+                
+                $strTitle = $prodpbs["title"];
+                
             ?>
-            <div class="card">
+            <div class="card" >
                 <a style="display:block; background-color: transparent;" href='<?php echo $strLink;?>'>
                     <div class="media media-2x1 gd-primary"> 
                         <img class="profile-image" src="<?php echo base_url().'assets/upload/image/'.$prodpbs["image"];?>"> 
                     </div>
                     <div class="card-body">
                         <h5 class="card-title"> 
-                            <?php echo $prodpbs["title"]; ?>
+                            <?php echo $strTitle; ?>
                         </h5>
                         <p class="fundraiser-name mb-0 pb-0">
                             <span class="lsdd-theme-color lsdp-font-13" style="color: #1e73be !important;">
@@ -39,7 +52,7 @@
                             </span>
                         </p>
                         <p class="card-text">
-                                <?php echo $prodpbs["title_long"]; ?>
+                                <?php echo $prodpbs["title_long"]."..."; ?>
                         </p>
                         <div id="progress-component">
                             <div class="bar" style="width:0% !important"></div>
@@ -47,11 +60,11 @@
                         <div class="lsdp-row no-gutters campaign-verification">
                             <div class="col-5">
                                 <small style="display:block;">Terkumpul</small>
-                                <span class="lsdd-theme-color font-weight-medium">Rp 0</span>
+                                <span class="lsdd-theme-color font-weight-medium"><?php echo $danaterkumpul; ?></span>
                             </div>
                             <div class="col-5 text-right">
                                 <small style="display:block;">Sisa Waktu</small>
-                                <span>21 Hari</span>                                        
+                                <span><?php echo $sisahari; ?></span>                                        
                             </div>
                         </div>
                     </div>
@@ -135,3 +148,15 @@
         </div>
     </div>
 </div>
+<script>
+    $("#items-program h5.card-title" ).each(function() {
+        $(this).height(41.6);
+    });
+    
+    $(document).ready(function () {
+        setTimeout( function(){ 
+            $(".items-program").slick('refresh');
+        }, 500 );
+    });
+    
+</script>

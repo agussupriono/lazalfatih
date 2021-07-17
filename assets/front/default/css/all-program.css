@@ -42,7 +42,7 @@
 
 .card-info{
     margin-left: 20px;
-    line-height: 12px;
+    line-height: 15px;
 }
 .items-all-program .card .card-progress{
     font-size: .9rem;
@@ -56,7 +56,7 @@
     }
     .card-info{
         margin-left: 0px;
-        line-height: 12px;
+        line-height: 15px;
     }
     .items-all-program .card .card-title{
         font-size: .8rem;

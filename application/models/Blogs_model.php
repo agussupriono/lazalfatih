@@ -45,7 +45,8 @@
         public function listAllDonasiPub() {
             $this->db->select('*');
             $this->db->from('blogs');
-            $this->db->where(array('blogs.status' => 'publish', 'blogs.category_id<>' => '1'));
+            $this->db->where(array('blogs.status' => 'publish'));
+            $this->db->where_not_in('blogs.category_id', array(1,2));
             $this->db->join('admins','admins.admin_id = blogs.user_id','LEFT');            
             $this->db->join('categories','categories.category_id = blogs.category_id','LEFT');
             $this->db->limit(5);

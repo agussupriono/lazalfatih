@@ -20,12 +20,17 @@ foreach ($categories as $categories1) {
     $catX['parent_category'][$categories1['parent_category_id']][] = $categories1['category_id'];
 }
 
-function buildCatSelect($parent, $catArr, $i = 1, $strDeep = "") {
+function buildCatSelect($parent, $catArr, $i = 1, $strDeep = "", $selected="") {
     $html = "";
     if (isset($catArr['parent_category'][$parent])) {
         foreach ($catArr['parent_category'][$parent] as $category_id) {
 
-            $html .= '<option value="' . $catArr['category'][$category_id]['category_id'] . '">' . $strDeep . $catArr['category'][$category_id]["category_name"] . '</option>';
+            if($selected==$catArr['category'][$category_id]['category_id']){
+                $strSelected = "selected";
+            } else {
+                $strSelected = "";
+            }
+            $html .= '<option value="' . $catArr['category'][$category_id]['category_id'] . '" '.$strSelected.'>' . $strDeep . $catArr['category'][$category_id]["category_name"] . '</option>';
 
             if (isset($catArr['parent_category'][$category_id])) {
                 if ($strDeep == "") {
@@ -60,14 +65,21 @@ function buildCatSelect($parent, $catArr, $i = 1, $strDeep = "") {
     </div>  
     <div class="col-md-8">
         <div class="form-group">
+            <label>Parent Category</label>      
             <select name="parent_category_id" class="form-control"  placeholder="Parent Category Name">
                 <option hidden >Parent Category Name</option>
                 <?php
-                echo buildCatSelect(0, $catX, 1);
+                echo buildCatSelect(0, $catX, 1, "", $category['parent_category_id']);
                 ?>                         
             </select>
         </div>
-    </div>
+    </div>  
+    <div class="col-md-4">
+        <div class="form-group">
+            <label>Button Title</label>      
+            <input type="text" name="button_title" class="form-control" placeholder="Title for transaction button"  value="<?php echo $category['button_title'] ?>">
+        </div>
+    </div>  
     <div class="col-md-12">
         <div class="form-group">
             <label>Description</label>

@@ -2,7 +2,7 @@
     $site = $this->mConfig->list_config();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style='overflow: hidden;'>
     <head>
 
         <!-- Basic Page Needs
@@ -90,7 +90,7 @@
               }
         </style>
     </head>
-<body style='overflow-x: hidden;'>
+<body style='overflow: hidden;'>
     <div class="lds-facebook-all">
     <div class="lds-facebook"><div></div><div></div><div></div></div>
     </div>

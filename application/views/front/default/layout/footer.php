@@ -67,6 +67,28 @@
     </div><!-- Copyright end -->
 </footer><!-- Footer end -->
 
+<!--  Modals-->
+<div class="panel-body">
+    <div class="modal fade" id="my-modal-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modals-->
+
+<input type="hidden" id="my-base-url" value="<?php echo base_url(); ?>">
 
 <!-- Javascript Files
 ================================================== -->
@@ -90,6 +112,8 @@
 
 <!-- Template custom -->
 <script src="<?php echo base_url();?>assets/front/default/js/script.js"></script>
+<!-- initialize Nice Scroll -->
+<script src="<?php echo base_url();?>assets/jquery/jquery.nicescroll.min.js"></script>
 
 </div><!-- Body inner end -->
 <script>
@@ -102,8 +126,43 @@
          $(".top-bar .top-info").css("color", "#fff");
          $(".top-bar .top-social ul li a").css("color", "#fff");
          $(".lds-facebook-all").fadeOut();
+         
+         $("body").niceScroll({horizrailenabled:false});
+        
     });
+    
+    $(window).bind("resize load", function () {
+        var vtop = $(".navbar-toggler").position().top;
+        var vleft = $(".navbar-toggler").position().left;
+        if ($(window).width() < 991) {
+            $("#btn-hitung-zakat").parent().css({position: 'relative'});
+            $('#btn-hitung-zakat').css({top: parseInt(vtop+10), left: parseInt(vleft-140), position:'absolute'});
+            $('#btn-hitung-zakat').css('cursor', 'pointer');
+            $('#btn-hitung-zakat').css('display', 'blok'); 
+        } else {
+            $('#btn-hitung-zakat').css('display', 'none'); 
+        }
+     });
+
+    function loadScriptBody(jssrc) {
+        var script= document.createElement('script');
+        script.type= 'text/javascript';
+        script.src= jssrc;
+        script.async = true;
+        document.body.appendChild(script);
+    }
+    function loadScriptHead(jssrc) {
+        var head= document.getElementsByTagName('head')[0];
+        var script= document.createElement('script');
+        script.type= 'text/javascript';
+        script.src= jssrc;
+        script.async = true;
+        head.appendChild(script);
+    }
 </script>
+<!-- hitung zakat -->
+<script src="<?php echo base_url();?>assets/front/default/js/hitung_zakat.js"></script>
+
 </body>
 
 </html>

@@ -46,7 +46,8 @@ class Blogs extends CI_Controller {
                 'order_category' => $i->post('order_category'),
                 'category_description' => $i->post('category_description'),
                 'date_category' => $i->post('date_category'),
-                'parent_category_id' => $i->post('parent_category_id')
+                'parent_category_id' => $i->post('parent_category_id'),
+                'button_title' => $i->post('button_title')
             );
             $this->mCategories->createCategory($data);
             $this->session->set_flashdata('sukses', 'Success');
@@ -181,6 +182,8 @@ class Blogs extends CI_Controller {
                 'category_name' => $i->post('category_name'),
                 'order_category' => $i->post('order_category'),
                 'date_category' => $i->post('date_category'),
+                'parent_category_id' => $i->post('parent_category_id'),
+                'button_title' => $i->post('button_title')
             );
             $this->mCategories->editCategory($data);
             $this->session->set_flashdata('sukses', 'Success');

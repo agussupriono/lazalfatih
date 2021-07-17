@@ -76,19 +76,19 @@ class Blog extends CI_Controller {
 
         $site = $this->mConfig->list_config();
         $blog = $this->mBlogs->readBlog($slugBlog);
-        $categories = $this->mCategories->listCategories();
-        $comments = $this->mBlogs->listCommentsByBlog($slugBlog);
-        $blogId = $blog['blog_id'];
-        $count = $this->mBlogs->countCommentByBlog($blogId);
+//        $categories = $this->mCategories->listCategories();
+//        $comments = $this->mBlogs->listCommentsByBlog($slugBlog);
+//        $blogId = $blog['blog_id'];
+//        $count = $this->mBlogs->countCommentByBlog($blogId);
         $menus = $this->mMenus->listMenus();
 
         $data = array('title' => $blog['title'] . ' - ' . $site['nameweb'],
             'site' => $site,
             'blog' => $blog,
-            'categories' => $categories,
-            'count' => $count,
+//            'categories' => $categories,
+//            'count' => $count,
             'menus' => $menus,
-            'comments' => $comments,
+//            'comments' => $comments,
             'isi' => 'front/'.$site['theme'].'/blog/read');
         $this->load->view('front/'.$site['theme'].'/layout/wrapper', $data);
     }
@@ -97,19 +97,31 @@ class Blog extends CI_Controller {
 
         $site = $this->mConfig->list_config();
         $blog = $this->mBlogs->readBlog($slugBlog);
-        $categories = $this->mCategories->listCategories();
-        $comments = $this->mBlogs->listCommentsByBlog($slugBlog);
-        $blogId = $blog['blog_id'];
-        $count = $this->mBlogs->countCommentByBlog($blogId);
+//        $categories = $this->mCategories->listCategories();
+//        $comments = $this->mBlogs->listCommentsByBlog($slugBlog);
+//        $blogId = $blog['blog_id'];
+//        $count = $this->mBlogs->countCommentByBlog($blogId);
         $menus = $this->mMenus->listMenus();
+        
+        if ($blog['date_end']!='0000-00-00 00:00:00'){
+            $sisahari = $this->mPublic->dateDifference(date('Y-m-d'),$blog['date_end'],'%d hari lagi');
+        } else {
+            $sisahari = '<img style="width: 21px;" src="'.base_url().'assets/front/default/images/infinity-32x32.png" />';
+        }
+        
+        $danaterkumpul = 'Rp. 0';
+        $donatur = '0 Donatur';
 
         $data = array('title' => $blog['title'] . ' - ' . $site['nameweb'],
             'site' => $site,
             'blog' => $blog,
-            'categories' => $categories,
-            'count' => $count,
+//            'categories' => $categories,
+//            'count' => $count,
             'menus' => $menus,
-            'comments' => $comments,
+//            'comments' => $comments,
+            'sisahari' => $sisahari,
+            'danaterkumpul' => $danaterkumpul,
+            'donatur' => $donatur,
             'isi' => 'front/'.$site['theme'].'/blog/donasi');
         $this->load->view('front/'.$site['theme'].'/layout/wrapper', $data);
     }

@@ -19,14 +19,14 @@ function buildMenu($parent, $menu, $i=1, $strDeep="") {
             if (isset($menu['parent_menus'][$menu_id])) {
                 if(count($menu['parent_menus'][$menu_id])>0){
                     $html .= '<li class="nav-item dropdown">';
-                    $html .= '<a class="nav-link" data-toggle="dropdown" href="'.$menu['menus'][$menu_id]['menu_url'].'">'.$menu['menus'][$menu_id]['menu_name'].' <i class="fa fa-angle-down"></i></a>';
+                    $html .= '<a class="nav-link" data-toggle="dropdown" href="'.base_url().$menu['menus'][$menu_id]['menu_url'].'">'.$menu['menus'][$menu_id]['menu_name'].' <i class="fa fa-angle-down"></i></a>';
                 } else {
                     $html .= '<li class="nav-item">';
-                    $html .= '<a class="nav-link" href="'.$menu['menus'][$menu_id]['menu_url'].'">'.$menu['menus'][$menu_id]['menu_name'].'</a>';
+                    $html .= '<a class="nav-link" href="'.base_url().$menu['menus'][$menu_id]['menu_url'].'">'.$menu['menus'][$menu_id]['menu_name'].'</a>';
                 }    
             } else {
                 $html .= '<li class="nav-item">';
-                $html .= '<a class="nav-link" href="'.$menu['menus'][$menu_id]['menu_url'].'">'.$menu['menus'][$menu_id]['menu_name'].'</a>';
+                $html .= '<a class="nav-link" href="'.base_url().$menu['menus'][$menu_id]['menu_url'].'">'.$menu['menus'][$menu_id]['menu_name'].'</a>';
             }
                 
             if (isset($menu['parent_menus'][$menu_id])) {
@@ -79,6 +79,7 @@ function buildMenu($parent, $menu, $i=1, $strDeep="") {
     <!--/ Container end -->
 </div>
 <!--/ Topbar end -->
+
 <!-- Header start -->
 <header id="header" class="header-two">
     <div class="site-navigation">
@@ -101,11 +102,12 @@ function buildMenu($parent, $menu, $i=1, $strDeep="") {
                             <ul class="nav navbar-nav ml-auto align-items-center">
                                 <?php echo buildMenu(0, $menusX, 1); ?>
                                 <li class="header-get-a-quote">
-                                    <a class="btn btn-primary" onclick="hitung_zakat()">Hitung Zakat</a>
+                                    <a class="btn btn-primary" data-toggle="modal" data-target="#my-modal-dialog" onclick="hitung_zakat()">Hitung Zakat</a>
                                 </li>
                             </ul>
                         </div>
                     </nav>
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#my-modal-dialog" id="btn-hitung-zakat" onclick="hitung_zakat()">Hitung Zakat</a>
                 </div>
                 <!--/ Col end -->
             </div>
